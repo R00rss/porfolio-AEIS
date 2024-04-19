@@ -1,5 +1,5 @@
 import { useState } from "react";
-import ThemeComponent from "./ThemeComponent";
+import ThemeComponent from "./ThemeComponent/ThemeComponent";
 
 interface Items {
     name: string,
@@ -67,7 +67,7 @@ export default function Navbar() {
                 <ul className="h-[60px] text-sm pl-2 flex gap-5 justify-start w-full">
                     {items.map((item, index) => {
                         const { link, name, status } = item
-                        const style = STYLES_STATUS[status] // Fix: Convert status to string
+                        const style = STYLES_STATUS[status] // TODO: Change the key to a string
                         return (
                             <li key={index} className={`px-2 duration-[1000ms] flex justify-center items-center border-b-4 ${style}`}>
                                 <button onClick={() => handleChanges(index)}>{name}</button>
