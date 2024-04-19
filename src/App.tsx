@@ -1,3 +1,4 @@
+import Footer from "./components/Footer"
 import Navbar from "./components/Navbar"
 import SocialMediaBar from "./components/SocialMediaBar"
 
@@ -1009,6 +1010,7 @@ function App() {
         Maiores hic illum natus, officia molestias sequi, molestiae quibusdam voluptatibus eos deserunt exercitationem rerum, explicabo qui distinctio veniam porro odio quae ab. Odit distinctio excepturi suscipit. Saepe adipisci esse quam!
         Obcaecati natus tempore est accusamus eaque veritatis tempora nemo explicabo, quibusdam inventore voluptatum esse illum. Asperiores possimus ex fugit a laudantium? Ex impedit eligendi, sequi cum fuga esse eveniet natus!
       </p>
+      <Footer />
     </>
   )
 }

@@ -3,5 +3,9 @@
 @tailwind utilities;
 
 body {
-  font-family: 'Inter Variable', sans-serif;
+  font-family: "Inter Variable", sans-serif;
+}
+
+.w-standard {
+  width: min(1200px, 90%);
 }

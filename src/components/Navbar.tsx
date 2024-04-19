@@ -1,34 +1,8 @@
 import { useState } from "react";
 import ThemeComponent from "./ThemeComponent/ThemeComponent";
+import { DEFAULT_ITEMS } from "../constans/Menu";
+import { Items } from "../models/Menu";
 
-interface Items {
-    name: string,
-    link: string
-    status: boolean
-}
-
-const DEFAULT_ITEMS: Items[] = [
-    {
-        name: "Home",
-        link: "/",
-        status: true
-    },
-    {
-        name: "Projects",
-        link: "/",
-        status: false
-    },
-    {
-        name: "Blog",
-        link: "/",
-        status: false
-    },
-    {
-        name: "Contact",
-        link: "/",
-        status: false
-    }
-]
 
 const STYLES_STATUS = {
     true: "border-primary-900",
@@ -52,7 +26,7 @@ export default function Navbar() {
         top-0
         shadow-[0px_0px_6px_-4px]
         rounded-full
-        w-[min(90%,1200px)]
+        w-standard
         mx-auto
         text-slate-100
         flex 
