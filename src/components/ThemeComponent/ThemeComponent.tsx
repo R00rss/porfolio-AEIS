@@ -12,17 +12,21 @@ export default function ThemeComponent() {
     function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
         // cuando es tipo checkbox e.target.checked
         console.log(typeof e.target.checked)
+        console.log("checked", e.target.checked)
         setDarkMode(e.target.checked)
     }
     return (
         <section className="flex justify-center items-center gap-2">
-            <button className={`${!darkMode ? "text-slate-100" : "text-slate-100/50"} text-xs`}>Light</button>
+            <button
+                onClick={() => setDarkMode(false)}
+                className={`${!darkMode ? "text-slate-100" : "text-slate-100/50"} lg:text-sm text-xs`}>Light</button>
             <label className={styles.switch} htmlFor="input_theme">
-                {/* <input value={darkMode} onChange={(e)=>handleChange(e)} type="checkbox" name="input_theme" id="input_theme" /> */}
                 <input checked={darkMode} onChange={handleChange} type="checkbox" name="input_theme" id="input_theme" />
                 <span className={styles.slider}></span>
             </label>
-            <button className={`${darkMode ? "text-slate-100" : "text-slate-100/50"} text-xs`}>Dark</button>
+            <button
+                onClick={() => setDarkMode(true)}
+                className={`${darkMode ? "text-slate-100" : "text-slate-100/50"} lg:text-sm text-xs`}>Dark</button>
         </section>
     )
 }

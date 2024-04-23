@@ -6,7 +6,6 @@ import TwitterIcon from "./Icons/TwitterIcon"
 import YouTubeIcon from "./Icons/YouTubeIcon"
 import TelegramIcon from "./Icons/TelegramIcon"
 
-const ICON_COLOR = "#ffffff"
 
 interface SocialMedia {
     icon: ReactNode,
@@ -15,39 +14,38 @@ interface SocialMedia {
 
 const SocialMediaItems: SocialMedia[] = [
     {
-        icon: <DiscordIcon fill={ICON_COLOR} />,
+        icon: <DiscordIcon />,
         link: "https://www.discord.com"
     },
     {
-        icon: <FacebookIcon fill={ICON_COLOR} />,
+        icon: <FacebookIcon />,
         link: "https://www.facebook.com"
     },
     {
-        icon: <InstagramIcon fill={ICON_COLOR} />,
+        icon: <InstagramIcon />,
         link: "https://www.instagram.com"
     },
     {
-        icon: <TwitterIcon fill={ICON_COLOR} />,
+        icon: <TwitterIcon />,
         link: "https://www.twitter.com"
     },
     {
-        icon: <YouTubeIcon fill={ICON_COLOR} />,
+        icon: <YouTubeIcon />,
         link: "https://www.youtube.com"
     },
     {
-        icon: <TelegramIcon fill={ICON_COLOR} />,
+        icon: <TelegramIcon />,
         link: "https://www.telegram.com"
     }
 ]
 
 function SocialMediaBar() {
     return (
-        <nav className="fixed right-4">
+        <nav className="fixed right-4 top-24">
             <ul className="flex flex-col gap-3 justify-center items-center">
-
                 {SocialMediaItems.map((item, index) => {
                     return (
-                        <li key={index} className="w-9 h-9 bg-black p-2 rounded-full">
+                        <li key={index} className="w-9 h-9 bg-black p-2 rounded-full group cursor-pointer hover:shadow-[0px_0px_14px_-6px_var(--primary-900)] duration-300">
                             <a href={item.link} target="_blank" >
                                 {item.icon}
                             </a>

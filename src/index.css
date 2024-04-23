@@ -2,10 +2,125 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --primary-900: #cf18b8;
+  --primary-800: #d62ac6;
+  --primary-700: #e04ed8;
+  --primary-600: #e873ea;
+  --primary-500: #f09ffc;
+  --primary-400: #f6b3fd;
+  --primary-300: #fac6fe;
+  --primary-200: #fde0ff;
+  --primary-100: #fee9ff;
+  --dark: #000000;
+}
 body {
   font-family: "Inter Variable", sans-serif;
 }
 
 .w-standard {
-  width: min(1200px, 90%);
+  width: min(1500px, 95%);
+}
+
+.w-standard-md {
+  width: min(1200px, 95%);
+}
+/*(Chrome, Safari, Opera) */
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--dark); /* Color de barra grande */
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-900); /* Color de barra pequeña */
+  border-radius: 5px;
+}
+
+/* Estilos para Gecko (Firefox) */
+html {
+  scrollbar-width: thin; /* Ancho del scrollbar */
+  scrollbar-color: var(--primary-900) var(--dark); /* Color del pulgar y del riel */
+}
+
+/* Estilos para Trident (Internet Explorer) */
+body {
+  scrollbar-base-color: var(--dark); /* Color de fondo del riel */
+  scrollbar-arrow-color: var(
+    --primary
+  ); /* Color de la flecha de desplazamiento */
+  scrollbar-track-color: var(--dark); /* Color de fondo del riel */
+  scrollbar-face-color: var(--primary-900); /* Color del pulgar */
+}
+
+.bg_gradient_pages {
+  background-color: #161616;
+}
+.bg_gradient_home {
+  background: rgb(0, 0, 0);
+  background: -moz-linear-gradient(
+    153deg,
+    rgba(0, 0, 0, 1) 27%,
+    rgba(34, 8, 88, 1) 72%,
+    rgba(155, 8, 171, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    153deg,
+    rgba(0, 0, 0, 1) 27%,
+    rgba(34, 8, 88, 1) 72%,
+    rgba(155, 8, 171, 1) 100%
+  );
+  background: linear-gradient(
+    153deg,
+    rgba(0, 0, 0, 1) 27%,
+    rgba(34, 8, 88, 1) 72%,
+    rgba(155, 8, 171, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#9b08ab",GradientType=1);
+}
+
+.center_position_fixed,
+.center_position_absolute {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.center_x_position_fixed {
+  left: 50%;
+  transform: translate(-50%, 0%);
+}
+
+.shadow_cv_button {
+  --offset: 14px;
+  --bgColor: #de19c328;
+  box-shadow: 0px 0px 1px calc(var(--offset) * 1) var(--bgColor),
+    0px 0px 1px calc(var(--offset) * 2) var(--bgColor);
+}
+
+.bg_gradient_skills {
+  background-image: linear-gradient(
+    90deg,
+    hsl(209deg 75% 77%) 0%,
+    hsl(210deg 74% 72%) 5%,
+    hsl(211deg 74% 66%) 11%,
+    hsl(211deg 73% 61%) 16%,
+    hsl(211deg 73% 55%) 21%,
+    hsl(211deg 73% 51%) 26%,
+    hsl(216deg 73% 55%) 32%,
+    hsl(222deg 73% 59%) 37%,
+    hsl(228deg 72% 63%) 42%,
+    hsl(236deg 71% 66%) 47%,
+    hsl(248deg 73% 68%) 53%,
+    hsl(262deg 79% 68%) 58%,
+    hsl(276deg 81% 67%) 63%,
+    hsl(289deg 81% 65%) 68%,
+    hsl(302deg 83% 63%) 74%,
+    hsl(305deg 89% 70%) 79%,
+    hsl(305deg 85% 76%) 84%,
+    hsl(304deg 79% 82%) 89%,
+    hsl(304deg 67% 87%) 95%,
+    hsl(304deg 40% 92%) 100%
+  );
 }

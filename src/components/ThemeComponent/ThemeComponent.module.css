@@ -1,8 +1,7 @@
 :root {
-  --primary: #cf18b8;
-  --switch-width: 30px;
-  --switch-height: 15px;
-  --slider-size: 12px;
+  --switch-width: 36px;
+  --switch-height: 20px;
+  --slider-size: 15px;
   --slider-padding: 2px;
   --slider-translation: calc(
     var(--switch-width) - var(--slider-size) - 2 * var(--slider-padding)
@@ -30,7 +29,7 @@
   right: 0;
   bottom: 0;
   background-color: var(--slider-bg);
-  box-shadow: 0px 0px 2px 1px var(--primary);
+  box-shadow: 0px 0px 2px 1px var(--primary-900);
   display: flex;
   padding-inline: var(--slider-padding);
   justify-content: start;
@@ -42,7 +41,7 @@
   content: "";
   height: var(--slider-size);
   width: var(--slider-size);
-  background-color: var(--primary);
+  background-color: var(--primary-900);
   border-radius: 50%;
   transition-duration: 300ms;
 }

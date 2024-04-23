@@ -1,14 +1,14 @@
 interface Props {
-    fill?: string,
     width?: string,
     height?: string
+    classes?: string
 }
 
 
-export default function InstagramIcon({ fill = "#758CA3", width = "100%", height = "100%" }: Props) {
+export default function InstagramIcon({ width = "100%", height = "100%", classes = "fill-[#758CA3] group-hover:fill-primary-900 duration-300" }: Props) {
     return (
         <svg
-            fill={fill}
+            className={classes}
             width={width}
             height={height}
             viewBox="0 0 48 48" version="1.1" id="Shopicons" xmlns="http://www.w3.org/2000/svg" x="0" y="0" xmlSpace="preserve" ><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier">
